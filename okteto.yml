@@ -1,0 +1,9 @@
+build:
+  lfs:
+    dockerfile: Dockerfile
+    context: .
+
+deploy:
+  image: ${OKTETO_BUILD_LFS_IMAGE}
+  commands:
+  - git lfs pull
