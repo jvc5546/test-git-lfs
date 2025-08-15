@@ -1,0 +1,5 @@
+services:
+  switzerland-lfs:
+    build:
+      context: .
+      dockerfile: Dockerfile

@@ -1,5 +1,5 @@
-FROM okteto/pipeline-runner:1.35.1
+FROM bitnami/nginx
 
-RUN apt-get update && \
-    apt-get install -y git-lfs && \
-    git lfs install
+WORKDIR /app
+
+COPY switzerland.jpg .
