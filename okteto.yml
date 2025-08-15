@@ -6,6 +6,9 @@ build:
 deploy:
   image: ${OKTETO_BUILD_LFS_IMAGE}
   commands:
-  - ls -al
-  - git lfs pull
+  # - ls -al
+  # - git remote -v
+  # - git remote set-url origin ssh://git@github.com/jvc5546/test-git-lfs.git
+  # - git pull
+  # - git lfs pull
   - ls -al
