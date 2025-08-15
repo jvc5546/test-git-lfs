@@ -10,7 +10,8 @@ build:
 deploy:
   image: ${OKTETO_BUILD_LFS_IMAGE}
   commands:
-  - ls -al
-  - git lfs pull
-  - ls -al
-  - okteto deploy -f docker-compose.yaml
+    - command: |
+        ls -al
+        git lfs pull
+        ls -al
+        okteto deploy -f docker-compose.yaml
