@@ -5,12 +5,12 @@ build:
     dockerfile: Dockerfile
 
 
+#Because Okteto does not natively support Git LFS, we need to manually pull the LFS files
+#Now, with all the LFS files we are able to build the application image and deploy the application with Compose
 deploy:
   image: ${OKTETO_BUILD_LFS_IMAGE}
   commands:
   - ls -al
-  #Because Okteto does not natively support Git LFS, we need to manually pull the LFS files
   - git lfs pull
   - ls -al
-  #Now, with all the LFS files we are able to build the application image and deploy the application with Compose
   - okteto deploy -f docker-compose.yaml
