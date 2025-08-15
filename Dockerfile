@@ -1,5 +1,5 @@
-FROM bitnami/nginx
+FROM nginx:1.29.1-alpine
 
-WORKDIR /app
+WORKDIR /usr/share/nginx/html
 
 COPY switzerland.jpg .
